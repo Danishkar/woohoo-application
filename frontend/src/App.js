@@ -1,10 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
 // pages & components
-import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Home from './pages/Home';
 import "./App.css"
 import { useState } from 'react';
+import Login1 from './pages/Login1';
 function App() {
   const [logged,setLogged] = useState(false);
   return (
@@ -12,7 +12,7 @@ function App() {
       {!logged ? <Route path='/' element={<Home/>} /> : null }
       <Route
         path='/login'
-        element={<Login setLogged={setLogged}/>}
+        element={<Login1 setLogged={setLogged}/>}
       />
       <Route
         path='/signup'

@@ -3,13 +3,13 @@ import { Routes, Route } from 'react-router-dom';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Home from './pages/Home';
-
+import "./App.css"
 import { useState } from 'react';
 function App() {
   const [logged,setLogged] = useState(false);
   return (
     <Routes>
-      {logged ? <Route path='/' element={<Home/>} /> : null }
+      {!logged ? <Route path='/' element={<Home/>} /> : null }
       <Route
         path='/login'
         element={<Login setLogged={setLogged}/>}

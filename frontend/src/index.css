@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    body {
+      @apply bg-body text-blue-secondary;
+    }
+    .h2 {
+      @apply text-2xl lg:text-4xl text-blue font-bold;
+    }
+    .btn,
+    .input-control {
+      @apply text-[15px] h-16 rounded-md outline-blue;
+    }
+    .btn {
+      @apply px-8 font-medium text-white bg-orange hover:bg-orange-hover transition;
+    }
+    .input-control {
+      @apply w-full max-w-[514px] px-8 text-blue placeholder:text-blue-secondary;
+    }
+  }

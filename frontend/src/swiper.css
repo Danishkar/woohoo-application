@@ -1,0 +1,28 @@
+.heroSlider .swiper-button-prev,
+.heroSlider .swiper-button-next {
+  color: #fe9a82;
+  transition: all 0.1s ease-in;
+}
+.heroSlider .swiper-button-prev:hover,
+.heroSlider .swiper-button-next:hover {
+  color: #ff4917;
+  transform: scale(1.3);
+  transition: all 0.1s ease-in;
+}
+.heroSlider .swiper-button-prev::after,
+.heroSlider .swiper-button-next::after {
+  font-size: 30px;
+}
+
+.heroSlider .swiper-pagination-bullet {
+  background: #ff4917;
+}
+
+@media (max-width: 768px) {
+  .heroSlider .swiper-button-prev:hover,
+  .heroSlider .swiper-button-next:hover {
+    color: #ff4917;
+    transform: scale(1);
+    transition: all 0.1s ease-in;
+  }
+}

@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import "./App.css"
 import { useState } from 'react';
 import Login1 from './pages/Login1';
+import Upload from './pages/Upload'
 function App() {
   const [logged,setLogged] = useState(false);
   return (
@@ -17,6 +18,10 @@ function App() {
       <Route
         path='/signup'
         element={<Signup setLogged={setLogged} />}
+      />
+      <Route
+        path='/upload'
+        element={<Upload />}
       />
     </Routes>
   );

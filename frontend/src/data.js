@@ -9,14 +9,14 @@ import { AiFillYoutube, AiFillInstagram, AiFillGithub } from 'react-icons/ai';
 export const navigation = [
   {
     name: 'home',
-    href: '#',
+    href: '/',
   },
   {
     name: 'About Us',
     href: '#',
   },
   {
-    name: 'Adoption',
+    name: 'Accommodation',
     href: '#',
   },
   {
@@ -25,7 +25,7 @@ export const navigation = [
   },
   {
     name: 'Profile',
-    href: '#',
+    href: '/profile',
   },
 ];
 

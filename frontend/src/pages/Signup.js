@@ -2,6 +2,7 @@ import { useState} from "react"
 import { useNavigate } from "react-router-dom";
 import api from "../api/woohoo_axios";
 const Signup = ({setLogged}) => {
+    const [name,setName] = useState("")
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
     const [ error,setError] =  useState("")
@@ -10,7 +11,7 @@ const Signup = ({setLogged}) => {
         e.preventDefault();
         setError("")
         console.log(email, password);
-        const body  = JSON.stringify({email,password})
+        const body  = JSON.stringify({name,email,password})
         const headers = {
             "Content-Type": 'application/json'
         }
@@ -33,6 +34,12 @@ const Signup = ({setLogged}) => {
     return (  
         <form className="signup" onSubmit={handleSubmit}>
             <h3>Sign up</h3>
+            <label>Name:</label>
+            <input 
+                type="text"
+                onChange = {(e)=>setName(e.target.value)}
+                value= {name}
+            />
             <label>Email:</label>
             <input 
                 type="email"

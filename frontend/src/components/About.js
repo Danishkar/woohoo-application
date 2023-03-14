@@ -39,7 +39,7 @@ const About = () => {
                             />
                             <div className="p-4">
                                 <h4 className="text-xl font-semibold tracking-tight text-blue">
-                                    Accomodation
+                                    Accommodation
                                 </h4>
                                 <p className="mb-2 leading-normal text-blue-secondary">
                                     react tailwind css card with image It is a long established

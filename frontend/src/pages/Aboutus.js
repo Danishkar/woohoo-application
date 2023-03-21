@@ -8,10 +8,10 @@ import Sujana from "../assets/img/Aboutus/Sujana.jpg"
 import Footer from "../components/Footer";
 function Aboutus() {
     return (
-    <>
+    <div className="div">
         <div className="about-section">
-            <h1 style={{paddingTop: '0px', textAlign: 'center'}}>About Us</h1>
-            <p style={{fontSize: '20px', color:'black'}}>WooHoo is a website dedicated to 
+            <h1 className="h1" style={{paddingTop: '0px', textAlign: 'center'}}>About Us</h1>
+            <p className="p" style={{fontSize: '20px', color:'black'}}>WooHoo is a website dedicated to 
             identifying and treating skin diseases in dogs and cats. Our team of 
             experienced veterinarians and animal healthcare professionals work tirelessly 
             to provide the best possible care for your beloved pets.<br></br>
@@ -34,17 +34,17 @@ function Aboutus() {
            support you and your pet every step of the way.</p>
           
         </div>
-        <h2 style={{ textAlign: "center",  fontSize:  50 + 'px', color:'#FF4917' }}>Our Team</h2>
+        <h2 className="h2" style={{ textAlign: "center",  fontSize:  50 + 'px', color:'#FF4917' }}>Our Team</h2>
         <div className="row">
             <div className="column">
                 <div className="card">
                     <img src={Sujana} alt="Jane" style={{ width: "38%" }} />
                     <div className="container">
-                        <h2>Sujana Tharmalingam</h2>
+                        <h2 className="h2">Sujana Tharmalingam</h2>
                         <p className="title">Group Leader</p>
-                        <p>IIT Number - 20210070<br></br> 
+                        <p className="p">IIT Number - 20210070<br></br> 
                             UOW Number - w1866994</p>
-                        <p>tharmalingam2021007iit.ac.lk</p>
+                        <p className="p">tharmalingam2021007iit.ac.lk</p>
                         <p><button className="button">Contact</button></p>
                     </div>
                 </div>
@@ -54,11 +54,11 @@ function Aboutus() {
                 <div className="card">
                     <img src={text} alt="Danishkar" style={{ width: "50%",  }} />
                     <div className="container">
-                        <h2>Danishkar Sriwagalingm</h2>
+                        <h2 className="h2">Danishkar Sriwagalingm</h2>
                         <p className="title">Group Member</p>
-                        <p>IIT Number - 20210070<br></br> 
+                        <p className="p">IIT Number - 20210070<br></br> 
                             UOW Number - w1866994</p>
-                        <p>mike@example.com</p>
+                        <p className="p">mike@example.com</p>
                         <p><button className="button">Contact</button></p>
                     </div>
                 </div>
@@ -68,11 +68,11 @@ function Aboutus() {
                 <div className="card">
                     <img src={bodini} alt="Bodini" style={{ width: "40%" }} />
                     <div className="container">
-                        <h2>Bodini Perera</h2>
+                        <h2 className="h2">Bodini Perera</h2>
                         <p className="title">Group Member</p>
-                        <p>IIT Number - 20210123<br></br> 
+                        <p className="p">IIT Number - 20210123<br></br> 
                             UOW Number - w1870576</p>
-                        <p>bodini.20210123@iit.ac.lk</p>
+                        <p className="p">bodini.20210123@iit.ac.lk</p>
                         <p><button className="button">Contact</button></p>
                     </div>
                 </div>
@@ -82,11 +82,11 @@ function Aboutus() {
                 <div className="card">
                     <img src={text} alt="Ranudi" style={{ width: "50%" }} />
                     <div className="container">
-                        <h2>Ranudi Kumarawadu</h2>
+                        <h2 className="h2">Ranudi Kumarawadu</h2>
                         <p className="title">Group Member</p>
-                        <p>IIT Number - 20210413<br></br> 
+                        <p className="p">IIT Number - 20210413<br></br> 
                             UOW Number - W1867139</p>
-                        <p>ranudi.20210413@iit.ac.lk</p>
+                        <p className="p">ranudi.20210413@iit.ac.lk</p>
                         <p><button className="button">Contact</button></p>
                     </div>
                 </div>
@@ -96,11 +96,11 @@ function Aboutus() {
                 <div className="card">
                     <img src={Chandula} alt="Chandula" style={{ width: "40%" }} />
                     <div className="container">
-                        <h2>Chandula NIpun</h2>
+                        <h2 className="h2">Chandula NIpun</h2>
                         <p className="title">Group Member</p>
-                        <p>IIT Number - 20210265<br></br>
+                        <p className="p">IIT Number - 20210265<br></br>
                             Uow Number - W1867053</p>
-                        <p>chandula.20210265@iit.ac.lk</p>
+                        <p className="p">chandula.20210265@iit.ac.lk</p>
                         <p><button className="button">Contact</button></p>
                     </div>
                 </div>
@@ -109,7 +109,7 @@ function Aboutus() {
         <div className='w-full max-w-[1440px] mx-auto bg-orange-quaternary relative'>
             <Footer />
         </div>
-    </>
+    </div>
     );
 }
         

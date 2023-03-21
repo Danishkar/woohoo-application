@@ -4,9 +4,11 @@ import Signup from './pages/Signup';
 import Home from './pages/Home';
 import "./App.css"
 import { useState } from 'react';
+import Signup1 from './pages/Signup1';
 import Login1 from './pages/Login1';
+import Upload from './pages/Upload'
+import Aboutus from './pages/Aboutus';
 import Profile from './pages/Profile';
-import Upload from './pages/Upload';
 function App() {
   const [logged,setLogged] = useState(false);
   console.log(logged);
@@ -20,8 +22,15 @@ function App() {
       />
       <Route
         path='/signup'
-        element={<Signup setLogged={setLogged} />}
+        element={<Signup1 setLogged={setLogged} />}
       />
+      <Route
+        path='/upload'
+        element={<Upload />}
+      />
+      <Route
+      path='/about'
+      element={<Aboutus/>}/>
       <Route
         path='/upload'
         element={<Upload />}

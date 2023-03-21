@@ -1,8 +1,9 @@
 import { useState} from "react"
 import { useNavigate } from "react-router-dom";
 import api from "../api/woohoo_axios";
+
 const Signup = ({setLogged}) => {
-    const [name,setName] = useState("")
+    const [Full_Name,setFullName] = useState("");
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
     const [ error,setError] =  useState("")
@@ -10,36 +11,33 @@ const Signup = ({setLogged}) => {
     const handleSubmit = async(e)=>{
         e.preventDefault();
         setError("")
-        console.log(email, password);
-        const body  = JSON.stringify({name,email,password})
+        console.log(Full_Name,email, password);
+        const body  = JSON.stringify({Full_Name,email,password})
         const headers = {
             "Content-Type": 'application/json'
         }
         try{
-           const response = await api.post("api/user/signup", body, {headers} )
+            const response = await api.post("api/user/signup", body, {headers} )
             const json = await response.data;
             if(response.statusText === 'OK'){
                 setLogged(true);
                 navigate("/")
-                console.log("signed in successfully")
-            }else{
-                console.log("fronend"+json.error)
-            } 
+                console.log("Sign up in successfully")
+            }
         }catch(err){
             console.log(err.response.data.error);
             setError(err.response.data.error);	
         }
-        
     }
     return (  
-        <form className="signup" onSubmit={handleSubmit}>
-            <h3>Sign up</h3>
-            <label>Name:</label>
+        <form className="Signup" onSubmit={handleSubmit}>
+            <h3>Signup</h3>
+            <label>Full Name</label>
             <input 
-                type="text"
-                onChange = {(e)=>setName(e.target.value)}
-                value= {name}
-            />
+                type="Full Name"
+                onChange = {(e)=>setFullName(e.target.value)}
+                value= {Full_Name }
+                />
             <label>Email:</label>
             <input 
                 type="email"
@@ -52,9 +50,9 @@ const Signup = ({setLogged}) => {
                 onChange = {(e)=>setPassword(e.target.value)}
                 value= {password}
             />
-            <button>Sign up</button>
+            <button>Log in</button>
             {error ? <h1>{error}</h1> : null}
-        </form>
+        </form> 
     );
 }
  

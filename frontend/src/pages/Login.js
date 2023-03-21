@@ -45,6 +45,7 @@ const Login = ({setLogged}) => {
             />
             <button>Log in</button>
             {error ? <h1>{error}</h1> : null}
+            
         </form> 
     );
 }

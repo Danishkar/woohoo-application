@@ -9,14 +9,22 @@ const Nav = () => {
     <nav className='text-[15px]'>
       <ul className='flex gap-x-10'>
         {navigation.map((item, index) => {
-          return (
-            <Link to={item.href} key={index} className='capitalize hover:text-orange transition'>
-              {item.name}
-            </Link>
-            
-          );
+          if(item.name === 'LogOut') {
+            return (
+              <Link to={item.href} key={index} className='capitalize hover:text-orange transition'>
+                {item.name}
+              </Link>
+            )
+          }else{
+            return (
+              <Link to={item.href} key={index} className='capitalize hover:text-orange transition'>
+                {item.name}
+              </Link>
+            )
+          }
+
+          
         })}
-      <button className='absolute bg-orange px-3 py-2 mt-1'>Log Out</button>
       </ul>
     </nav>
   );

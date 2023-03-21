@@ -24,9 +24,9 @@ export const navigation = [
     href: '#',
   },
   {
-    name: 'Profile',
-    href: '/profile',
-  },
+    name: 'LogOut',
+    href: '/login',
+  }
 ];
 
 

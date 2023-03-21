@@ -1,6 +1,5 @@
 import { useState} from "react"
 import { useNavigate } from "react-router-dom";
-import Footer from "../components/Footer";
 import api from "../api/woohoo_axios";
 
 const Signup = ({setLogged}) => {

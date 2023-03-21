@@ -84,9 +84,9 @@ function Aboutus() {
                     <div className="container">
                         <h2>Ranudi Kumarawadu</h2>
                         <p className="title">Group Member</p>
-                        <p>IIT Number - 20210070<br></br> 
-                            UOW Number - w1866994</p>
-                        <p>mike@example.com</p>
+                        <p>IIT Number - 20210413<br></br> 
+                            UOW Number - W1867139</p>
+                        <p>ranudi.20210413@iit.ac.lk</p>
                         <p><button className="button">Contact</button></p>
                     </div>
                 </div>

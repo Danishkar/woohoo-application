@@ -6,6 +6,7 @@ import "./App.css"
 import { useState } from 'react';
 import Signup1 from './pages/Signup1';
 import Login1 from './pages/Login1';
+import Upload from './pages/Upload'
 import Aboutus from './pages/Aboutus';
 function App() {
   const [logged,setLogged] = useState(false);
@@ -19,6 +20,10 @@ function App() {
       <Route
         path='/signup'
         element={<Signup1 setLogged={setLogged} />}
+      />
+      <Route
+        path='/upload'
+        element={<Upload />}
       />
       <Route
       path='/about'

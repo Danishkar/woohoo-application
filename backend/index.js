@@ -2,7 +2,14 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const multer = require("multer");
+const fs = require("fs");
+const { spawn } = require('child_process');
+
+const imageModel = require("./models/imageModel")
+
 const userRoutes = require("./routes/user")
+const uploadRoutes = require("./routes/upload")
 // express app
 const app = express();
 
@@ -16,7 +23,11 @@ app.use((req,res,next)=>{
 })
 // routes
 app.use("/api/user",userRoutes)
+app.use("/api", uploadRoutes)
+
+
 // connect to mongoose
+mongoose.set('strictQuery', true)
 mongoose.connect(process.env.MONG_URL)
     .then(()=>{
         // listen for requests

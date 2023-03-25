@@ -1,5 +1,5 @@
 .upload {
-    padding: 2rem 0;
+    padding: 8rem 0 2rem 0;
   }
   
   .upload-label {
@@ -37,6 +37,10 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    width: 50%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .image {
@@ -47,8 +51,8 @@
   
   .image button {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    top: 0;
+    left: 0;
     cursor: pointer;
     border: none;
     color: white;

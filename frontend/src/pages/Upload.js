@@ -9,6 +9,11 @@ const Upload = () =>{
     const [selectedImage, setSelectedImage] = useState(null);
     const [image, setImage] = useState(null);
     const [foundDisease, setFoundDisease] = useState(null);
+    const [animalTypes, setAnimalTypes] = useState("cat");
+    const radioChanged = (e) =>{
+        setAnimalTypes(e.target.value)
+    }
+
     const onSelectFile = (event) => {
         setFoundDisease(null)
         const selectedFile = event.target.files[0];
@@ -27,8 +32,9 @@ const Upload = () =>{
 
     const handleUploadImage = async () => {
         const formData = new FormData();
-        formData.append("name", "image29")
+        formData.append("name", "image29");
         formData.append("testImage", image);
+        formData.append("animalType", animalTypes);
         console.log(formData);
         try {
             const response = await api.post("api/upload", formData);
@@ -48,12 +54,28 @@ const Upload = () =>{
         <section className="upload relative min-h-[748px] pt-24 pb-12 lg:pt-32 overflow-hidden items-center">
             <h1 className="flex justify-center mb-4 text-[20px] font-bold">Select the type of animal.</h1>
             <div className="flex items-center mb-4 justify-center">
-                <input checked  id="cat" type="radio" value="" name="radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-                <label for="cat" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Cat</label>
+                <input
+                    defaultChecked={animalTypes === 'cat'}
+                    onClick={radioChanged}
+                    id="cat"
+                    type="radio"
+                    value="cat"
+                    name="radio"
+                    className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                />
+                <label htmlFor="cat" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Cat</label>
             </div>
             <div className="flex items-center justify-center mb-8">
-                <input id="dog" type="radio" value="" name="radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-                <label for="dog" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Dog</label>
+                <input
+                    defaultChecked={animalTypes === 'dog'}
+                    onClick={radioChanged}
+                    id="dog"
+                    type="radio"
+                    value="dog"
+                    name="radio"
+                    className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                />
+                <label htmlFor="dog" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Dog</label>
             </div>
             <h1 className="flex justify-center mb-4 text-[20px] font-bold">Add the picture of the infeacted area.</h1>
             <label className="upload-label">
@@ -86,7 +108,7 @@ const Upload = () =>{
                 )}
             </div>
             <div className={foundDisease == null ? "hidden":""}>
-                <h1>{foundDisease}</h1>
+                <h1>{foundDisease + animalTypes}</h1>
             </div>
         </section>
         <Footer />

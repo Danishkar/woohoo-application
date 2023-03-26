@@ -6,7 +6,8 @@ const imageModel = require("../models/imageModel");
 
 const uploadImageNPredict = async (req, res) =>{
     let output = '';
-    console.log("Upload"+ req.file);
+    let animalType = req.body.animalType
+    console.log(animalType);
     const saveImage =  imageModel({
         name: req.body.name,
         img: {
@@ -23,7 +24,14 @@ const uploadImageNPredict = async (req, res) =>{
         .catch((err) => {
             console.log(err, "error has occur");
         });
-    const pyScript = spawn('python', ['predict.py', './uploads/' + req.file.filename]);
+    let pyScript = ""
+    if(animalType === 'cat') {
+        pyScript = spawn('python', ['predict_cat.py', './uploads/' + req.file.filename]);
+        console.log("ran the cat model");
+    }else{
+        pyScript = spawn('python', ['predict_dog.py', './uploads/' + req.file.filename]);
+        console.log("ran the dog model");
+    }
 
     pyScript.stdout.on('data', (data) => {
         console.log(`stdout: ${data}`);

@@ -2,9 +2,10 @@ import React from "react";
 import "./Aboutus.css";
 
 import Chandula from "../assets/img/Aboutus/Chandula.jpg"
-import text from "../assets/img/Aboutus/text.png"
+import Ranudi from "../assets/img/Aboutus/Ranudi.jpeg"
 import bodini from "../assets/img/Aboutus/bodini.jpeg"
 import Sujana from "../assets/img/Aboutus/Sujana.jpg"
+import Danishkar from "../assets/img/Aboutus/Danishkar.jpeg"
 import Footer from "../components/Footer";
 function Aboutus() {
     return (
@@ -38,7 +39,7 @@ function Aboutus() {
         <div className="row">
             <div className="column">
                 <div className="card">
-                    <img src={Sujana} alt="Jane" style={{ width: "38%" }} />
+                    <img src={Sujana} alt="Sujana" style={{ width: "38%" }} />
                     <div className="container">
                         <h2 className="h2">Sujana Tharmalingam</h2>
                         <p className="title">Group Leader</p>
@@ -52,13 +53,13 @@ function Aboutus() {
 
             <div className="column">
                 <div className="card">
-                    <img src={text} alt="Danishkar" style={{ width: "50%",  }} />
+                    <img src={Danishkar} alt="Danishkar" style={{ width: "42%",  }} />
                     <div className="container">
                         <h2 className="h2">Danishkar Sriwagalingm</h2>
                         <p className="title">Group Member</p>
                         <p className="p">IIT Number - 20210070<br></br> 
                             UOW Number - w1866994</p>
-                        <p className="p">mike@example.com</p>
+                        <p className="p">danishkar.20210779@iit.ac.lk</p>
                         <p><button className="button">Contact</button></p>
                     </div>
                 </div>
@@ -80,7 +81,7 @@ function Aboutus() {
 
             <div className="column">
                 <div className="card">
-                    <img src={text} alt="Ranudi" style={{ width: "50%" }} />
+                    <img src={Ranudi} alt="Ranudi" style={{ width: "28%" }} />
                     <div className="container">
                         <h2 className="h2">Ranudi Kumarawadu</h2>
                         <p className="title">Group Member</p>
@@ -96,7 +97,7 @@ function Aboutus() {
                 <div className="card">
                     <img src={Chandula} alt="Chandula" style={{ width: "40%" }} />
                     <div className="container">
-                        <h2 className="h2">Chandula NIpun</h2>
+                        <h2 className="h2">Chandula Nipun</h2>
                         <p className="title">Group Member</p>
                         <p className="p">IIT Number - 20210265<br></br>
                             Uow Number - W1867053</p>
@@ -114,4 +115,4 @@ function Aboutus() {
 }
         
   
-export default Aboutus;        
+export default Aboutus;   

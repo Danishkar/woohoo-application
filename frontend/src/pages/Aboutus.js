@@ -7,12 +7,14 @@ import bodini from "../assets/img/Aboutus/bodini.jpeg"
 import Sujana from "../assets/img/Aboutus/Sujana.jpg"
 import Danishkar from "../assets/img/Aboutus/Danishkar.jpeg"
 import Footer from "../components/Footer";
+import Header from "../components/Header";
 function Aboutus() {
     return (
-    <div className="div">
+    <div className="divv w-full max-w-[1440px] mx-auto bg-orange-quaternary relative">
+        <Header />
         <div className="about-section">
-            <h1 className="h1" style={{paddingTop: '0px', textAlign: 'center'}}>About Us</h1>
-            <p className="p" style={{fontSize: '20px', color:'black'}}>WooHoo is a website dedicated to 
+            <h1 className="h11" style={{paddingTop: '0px', textAlign: 'center'}}>About Us</h1>
+            <p className="pp" style={{fontSize: '20px', color:'black'}}>WooHoo is a website dedicated to 
             identifying and treating skin diseases in dogs and cats. Our team of 
             experienced veterinarians and animal healthcare professionals work tirelessly 
             to provide the best possible care for your beloved pets.<br></br>
@@ -35,74 +37,74 @@ function Aboutus() {
            support you and your pet every step of the way.</p>
           
         </div>
-        <h2 className="h2" style={{ textAlign: "center",  fontSize:  50 + 'px', color:'#FF4917' }}>Our Team</h2>
+        <h2 className="h22" style={{ textAlign: "center",  fontSize:  50 + 'px', color:'#FF4917' }}>Our Team</h2>
         <div className="row">
-            <div className="column">
-                <div className="card">
-                    <img src={Sujana} alt="Sujana" style={{ width: "38%" }} />
-                    <div className="container">
-                        <h2 className="h2">Sujana Tharmalingam</h2>
-                        <p className="title">Group Leader</p>
-                        <p className="p">IIT Number - 20210070<br></br> 
+            <div className="columnn">
+                <div className="cardd text-center">
+                    <img src={Sujana} alt="Sujana" style={{ width: "38%" , marginLeft:"auto", marginRight:'auto' }} />
+                    <div className="containers">
+                        <h2 className="h22">Sujana Tharmalingam</h2>
+                        <p className="titlee">Group Leader</p>
+                        <p className="pp">IIT Number - 20210070<br></br> 
                             UOW Number - w1866994</p>
-                        <p className="p">tharmalingam2021007iit.ac.lk</p>
-                        <p><button className="button">Contact</button></p>
+                        <p className="pp">tharmalingam2021007iit.ac.lk</p>
+                        <p><button className="buttonn">Contact</button></p>
                     </div>
                 </div>
             </div>
 
-            <div className="column">
-                <div className="card">
-                    <img src={Danishkar} alt="Danishkar" style={{ width: "42%",  }} />
-                    <div className="container">
-                        <h2 className="h2">Danishkar Sriwagalingm</h2>
-                        <p className="title">Group Member</p>
-                        <p className="p">IIT Number - 20210070<br></br> 
+            <div className="columnn">
+                <div className="cardd">
+                    <img src={Danishkar} alt="Danishkar" style={{ width: "42%", marginLeft:"auto", marginRight:'auto'}} />
+                    <div className="containers">
+                        <h2 className="h22">Danishkar Sivalingam</h2>
+                        <p className="titlee">Group Member</p>
+                        <p className="pp">IIT Number - 20210070<br></br> 
                             UOW Number - w1866994</p>
-                        <p className="p">danishkar.20210779@iit.ac.lk</p>
-                        <p><button className="button">Contact</button></p>
+                        <p className="pp">danishkar.20210779@iit.ac.lk</p>
+                        <p><button className="buttonn">Contact</button></p>
                     </div>
                 </div>
             </div>
 
-            <div className="column">
-                <div className="card">
-                    <img src={bodini} alt="Bodini" style={{ width: "40%" }} />
-                    <div className="container">
-                        <h2 className="h2">Bodini Perera</h2>
-                        <p className="title">Group Member</p>
-                        <p className="p">IIT Number - 20210123<br></br> 
+            <div className="columnn">
+                <div className="cardd">
+                    <img src={bodini} alt="Bodini" style={{ width: "40%", marginLeft:"auto", marginRight:'auto' }} />
+                    <div className="containers">
+                        <h2 className="h22">Bodini Perera</h2>
+                        <p className="titlee">Group Member</p>
+                        <p className="pp">IIT Number - 20210123<br></br> 
                             UOW Number - w1870576</p>
-                        <p className="p">bodini.20210123@iit.ac.lk</p>
-                        <p><button className="button">Contact</button></p>
+                        <p className="pp">bodini.20210123@iit.ac.lk</p>
+                        <p><button className="buttonn">Contact</button></p>
                     </div>
                 </div>
             </div>
 
-            <div className="column">
-                <div className="card">
-                    <img src={Ranudi} alt="Ranudi" style={{ width: "28%" }} />
-                    <div className="container">
-                        <h2 className="h2">Ranudi Kumarawadu</h2>
-                        <p className="title">Group Member</p>
-                        <p className="p">IIT Number - 20210413<br></br> 
+            <div className="columnn">
+                <div className="cardd">
+                    <img src={Ranudi} alt="Ranudi" style={{ width: "28%", marginLeft:"auto", marginRight:'auto' }} />
+                    <div className="containers">
+                        <h2 className="h22">Ranudi Kumarawadu</h2>
+                        <p className="titlee">Group Member</p>
+                        <p className="pp">IIT Number - 20210413<br></br> 
                             UOW Number - W1867139</p>
-                        <p className="p">ranudi.20210413@iit.ac.lk</p>
-                        <p><button className="button">Contact</button></p>
+                        <p className="pp">ranudi.20210413@iit.ac.lk</p>
+                        <p><button className="buttonn">Contact</button></p>
                     </div>
                 </div>
             </div>
 
-            <div className="column">
-                <div className="card">
-                    <img src={Chandula} alt="Chandula" style={{ width: "40%" }} />
-                    <div className="container">
-                        <h2 className="h2">Chandula Nipun</h2>
-                        <p className="title">Group Member</p>
-                        <p className="p">IIT Number - 20210265<br></br>
+            <div className="columnn">
+                <div className="cardd">
+                    <img src={Chandula} alt="Chandula" style={{ width: "40%", marginLeft:"auto", marginRight:'auto' }} />
+                    <div className="containers">
+                        <h2 className="h22">Chandula Nipun</h2>
+                        <p className="titlee">Group Member</p>
+                        <p className="pp">IIT Number - 20210265<br></br>
                             Uow Number - W1867053</p>
-                        <p className="p">chandula.20210265@iit.ac.lk</p>
-                        <p><button className="button">Contact</button></p>
+                        <p className="pp">chandula.20210265@iit.ac.lk</p>
+                        <p><button className="buttonn">Contact</button></p>
                     </div>
                 </div>
             </div>

@@ -5,7 +5,18 @@ import "./Upload.css"
 import api from "../api/woohoo_axios";
 
 
+import Backdrop from '@mui/material/Backdrop';
+import CircularProgress from '@mui/material/CircularProgress';
+
 const Upload = () =>{
+    const [open, setOpen] = useState(false);
+    const handleClose = () => {
+        setOpen(false);
+    };
+    const handleToggle = () => {
+        setOpen(!open);
+    };
+
     const [selectedImage, setSelectedImage] = useState(null);
     const [image, setImage] = useState(null);
     const [foundDisease, setFoundDisease] = useState(null);
@@ -31,6 +42,7 @@ const Upload = () =>{
     }
 
     const handleUploadImage = async () => {
+        handleToggle()
         const formData = new FormData();
         formData.append("name", "image29");
         formData.append("testImage", image);
@@ -40,7 +52,8 @@ const Upload = () =>{
             const response = await api.post("api/upload", formData);
             if(response.statusText === 'OK'){
                 deleteHandler();
-                setFoundDisease(response.data)
+                handleClose();
+                setFoundDisease(response.data);
                 console.log(response.data);
             }
         } catch (error) {
@@ -92,9 +105,18 @@ const Upload = () =>{
             <br />
 
             {selectedImage && (
-                <button className="upload-btn" onClick={handleUploadImage}>
+                <>
+                    <button className="upload-btn" onClick={handleUploadImage}>
                     UPLOAD IMAGE
                 </button>
+                <Backdrop
+                    sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+                    open={open}
+                >
+                    <CircularProgress color="inherit"/>
+                </Backdrop>
+                </>
+                
             )}
 
             <div className="images">

@@ -9,22 +9,27 @@ import { AiFillYoutube, AiFillInstagram, AiFillGithub } from 'react-icons/ai';
 export const navigation = [
   {
     name: 'home',
+    inpage: false,
     href: '/',
   },
   {
     name: 'About Us',
-    href: '#',
+    inpage: false,
+    href: '/about',
   },
   {
     name: 'Accommodation',
+    inpage: false,
     href: '#',
   },
   {
     name: 'Contact Us',
-    href: '#',
+    inpage: true,
+    href: 'contact',
   },
   {
     name: 'LogOut',
+    inpage: false,
     href: '/login',
   }
 ];

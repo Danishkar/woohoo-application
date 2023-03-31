@@ -27,7 +27,8 @@ const loginUser = async(req,res)=>{
 
 // sign up user
 const signUpUser = async(req,res)=>{
-    const {name,email, password} = req.body;
+    console.log(req.body)
+    const {name ,email, password} = req.body;
     try {
         // const user = await User.signup(email,password);
         if (!email || !password){

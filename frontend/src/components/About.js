@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const About = () => {
     return ( 
@@ -26,9 +27,11 @@ const About = () => {
                                     fact that a reader will be distracted by the readable
                                     content.
                                 </p>
-                                <button className="px-4 py-2 text-sm bg-orange text-white rounded shadow">
-                                    Read more
-                                </button>
+                                <Link to={'/upload'}>
+                                    <button className="px-4 py-2 text-sm bg-orange text-white rounded shadow">
+                                        Go
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                         <div className="w-full bg-white rounded-lg shadow-xl lg:max-w-sm">

@@ -1,8 +1,40 @@
 import * as React from 'react';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import api from "../api/woohoo_axios";
+import { CircularProgress } from '@mui/material';
 
+export default function Form({setLogged}){
+    const [loading, setLoading] = useState(false);
+    const [email,setEmail] = useState("");
+    const [password,setPassword] = useState("");
+    const [ error,setError] =  useState("")
+    const navigate = useNavigate();
+    const handleSubmit = async(e)=>{
+        setLoading(true)
+        e.preventDefault();
+        setError("")
+        console.log(email, password);
+        const body  = JSON.stringify({email,password})
+        const headers = {
+            "Content-Type": 'application/json'
+        }
+        try{
+            const response = await api.post("api/user/login", body, {headers} )
+            const json = await response.data;
+            if(response.statusText === 'OK'){
+                setLoading(false)
+                setLogged(true);
+                navigate("/")
+                console.log("logged in successfully")
+            }
+        }catch(err){
+            console.log(err.response.data.error);
+            setError(err.response.data.error);
+            setLoading(false)
+        }
+    }
 
-export default function Form({email, password,setEmail,setPassword,handleSubmit,error}){
-    
     return(
         <div className='bg-white px-10 py-[5vh] rounded-3xl border-3' style={{borderColor:'#f3f4f6'}}>
             <h1 className='text-5xl font-semibold'>Login</h1>
@@ -40,7 +72,7 @@ export default function Form({email, password,setEmail,setPassword,handleSubmit,
 
                 </div>
                 <div className='mt-8 flex flex-col gap-y-4'>
-                        <button className='active:scale-[.98] active:duration-75 transition-all hover:scale-[1.01]  ease-in-out transform py-4 bg-orange rounded-xl text-white font-bold text-lg'>Sign in</button>
+                        <button className='active:scale-[.98] active:duration-75 transition-all hover:scale-[1.01]  ease-in-out transform py-4 bg-orange rounded-xl text-white font-bold text-lg'>{loading?<CircularProgress color="inherit" size="2rem"/>:"Log in"}</button>
                         <button 
                             className='flex items-center justify-center gap-2 active:scale-[.98] active:duration-75 transition-all hover:scale-[1.01]  ease-in-out transform py-4  rounded-xl text-gray-700 font-semibold text-lg border-2' style={{borderColor:'#f3f4f6'}}>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

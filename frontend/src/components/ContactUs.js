@@ -11,13 +11,13 @@ const ContactUs = () => {
     e.preventDefault();
     
     console.log(name, email, message);
-    if(name == "" ){
+    if(name === "" ){
       setError("Please enter a name")
     }
-    else if(email == ""){
+    else if(email ===""){
       setError("Please enter the email address");
     }
-    else if(message == "" ){
+    else if(message === "" ){
       setError("Please enter a message");
     }
     else{
@@ -35,7 +35,7 @@ const ContactUs = () => {
     
   }
   return ( 
-    <section className='py-12 lg:pb-12 lg:mt-32 relative min-h-[584px]' onSubmit={handleSubmit}>
+    <section name='contact' className='py-12 lg:pb-12 lg:mt-32 relative min-h-[584px]' onSubmit={handleSubmit}>
       <div className='container mx-auto'>
         <div className='lg:absolute lg:-top-40 lg:left-0 lg:right-0'>
           {/* image */}
@@ -69,7 +69,7 @@ const ContactUs = () => {
               value= {message}
             >
             </textarea>
-            <button className='btn w-full max-w-[514px]'>Send</button>
+            <button className='btn w-full max-w-[514px]'>Send</button>.
             <h2 className={`${success? "text-[#ffffff]" :"text-[#FF0000]"} font-bold text-2xl`}>{error && error}</h2>
           </form>
         </div>

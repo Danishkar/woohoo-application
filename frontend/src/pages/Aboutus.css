@@ -1,45 +1,40 @@
-.div {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-}
-
-.h1 {
+.h11 {
   font-size: 100px ;
-  font-style: italic;
-  font-family: 'Times New Roman', Times, serif;
+  /* font-style: italic;
+  font-family: 'Times New Roman', Times, serif; */
 
 }
 
-.h2 {
+.h22 {
   color: black;
-  font-family: 'Times New Roman', Times, serif;
+  /* font-family: 'Times New Roman', Times, serif; */
   font-size: 20px;
 }
 
-.p{
+.pp{
   color:black;
-  font-family: 'Times New Roman', Times, serif;
+  /* font-family: 'Times New Roman', Times, serif; */
   font-size: 20px;
 }
 
 
-
+/* 
 html {
   box-sizing: border-box;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
-}
+} */
 
-.column {
+.columnn {
   float: left;
   width: 25%;
   margin-bottom: 16px;
   padding: 5px;
 }
 
-.card {
+.cardd {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 8px;
 }
@@ -50,23 +45,23 @@ html {
   color: #FF4917;
 }
 
-.container {
+.containers {
   padding: 0 16px;
 }
 
-.container::after, .row::after {
+.containers::after, .row::after {
   content: "";
   clear: both;
   display: table;
 }
 
-.title {
+.titlee {
   color: black;
   font-size: 20px;
-  font-family: 'Times New Roman', Times, serif;
+  /* font-family: 'Times New Roman', Times, serif; */
 }
 
-.button {
+.buttonn {
   border: none;
   outline: 0;
   display: inline-block;
@@ -78,12 +73,12 @@ html {
   width: 104%;
 }
 
-.button:hover {
+.buttonn:hover {
   background-color:#FB3D08;
 }
 
 @media screen and (max-width: 650px) {
-  .column {
+  .columnn {
     width: 100%;
     display: block;
   }

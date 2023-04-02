@@ -7,8 +7,10 @@ import api from "../api/woohoo_axios";
 
 import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
+import Disease from "../components/Disease";
 
 const Upload = () =>{
+    const [hid,setHide] = useState(false);
     const [open, setOpen] = useState(false);
     const handleClose = () => {
         setOpen(false);
@@ -54,6 +56,7 @@ const Upload = () =>{
                 deleteHandler();
                 handleClose();
                 setFoundDisease(response.data);
+                setHide(true);
                 console.log(response.data);
             }
         } catch (error) {
@@ -65,8 +68,8 @@ const Upload = () =>{
         <>
         <Header />
         <section className="upload relative min-h-[748px] pt-24 pb-12 lg:pt-32 overflow-hidden items-center">
-            <h1 className="flex justify-center mb-4 text-[20px] font-bold">Select the type of animal.</h1>
-            <div className="flex items-center mb-4 justify-center">
+            {!hid &&<h1 className="flex justify-center mb-4 text-[20px] font-bold">Select the type of animal.</h1>}
+            {!hid && <div className="flex items-center mb-4 justify-center">
                 <input
                     defaultChecked={animalTypes === 'cat'}
                     onClick={radioChanged}
@@ -77,8 +80,8 @@ const Upload = () =>{
                     className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                 />
                 <label htmlFor="cat" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Cat</label>
-            </div>
-            <div className="flex items-center justify-center mb-8">
+            </div>}
+            {!hid && <div className="flex items-center justify-center mb-8">
                 <input
                     defaultChecked={animalTypes === 'dog'}
                     onClick={radioChanged}
@@ -89,9 +92,9 @@ const Upload = () =>{
                     className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                 />
                 <label htmlFor="dog" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Dog</label>
-            </div>
-            <h1 className="flex justify-center mb-4 text-[20px] font-bold">Add the picture of the infeacted area.</h1>
-            <label className="upload-label">
+            </div>}
+            {!hid && <h1 className="flex justify-center mb-4 text-[20px] font-bold">Add the picture of the infeacted area.</h1>}
+            {!hid && <label className="upload-label">
                 + Add Image
                 <br />
                 <span>only one image</span>
@@ -101,10 +104,10 @@ const Upload = () =>{
                     onChange={onSelectFile}
                     accept=".png , .jpeg, .jpg"
                 />
-            </label>
-            <br />
+            </label>}
+            {!hid && <br />}
 
-            {selectedImage && (
+            {!hid && selectedImage && (
                 <>
                     <button className="upload-btn" onClick={handleUploadImage}>
                     UPLOAD IMAGE
@@ -119,7 +122,7 @@ const Upload = () =>{
                 
             )}
 
-            <div className="images">
+            {!hid && <div className="images">
                 {selectedImage && (
                     <div className="image">
                         <img className="upload-img" src={selectedImage} height="200" alt="upload" />
@@ -128,10 +131,8 @@ const Upload = () =>{
                         </button>
                     </div>
                 )}
-            </div>
-            <div className={foundDisease == null ? "hidden":""}>
-                <h1>{foundDisease + animalTypes}</h1>
-            </div>
+            </div>}
+            {hid && <Disease setHide={setHide} foundDisease={foundDisease} animalTypes={animalTypes} />}
         </section>
         <Footer />
         </>

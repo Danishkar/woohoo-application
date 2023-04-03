@@ -19,7 +19,7 @@ const loginUser = async(req,res)=>{
         if(!match){
             throw Error("Incorrect password")
         }
-        await res.status(200).json(user.email)
+        await res.status(200).json(user)
     } catch (error) {
         res.status(400).json({error:error.message})
     }
@@ -48,7 +48,7 @@ const signUpUser = async(req,res)=>{
         const hash = await bcrypt.hash(password, salt);
     
         const user = await User.create({name, email, password:hash})
-        await res.status(200).json(user.email)
+        await res.status(200).json(user)
     } catch (error) {
         res.status(400).json({error:error.message})
     }

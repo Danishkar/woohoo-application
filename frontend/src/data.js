@@ -31,11 +31,11 @@ export const navigation = [
     inpage: true,
     href: 'contact',
   },
-  {
-    name: 'LogOut',
-    inpage: false,
-    href: '/login',
-  }
+  // {
+  //   name: 'LogOut',
+  //   inpage: false,
+  //   href: '/login',
+  // }
 ];
 
 

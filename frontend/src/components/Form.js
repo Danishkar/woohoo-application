@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import api from "../api/woohoo_axios";
 import { CircularProgress } from '@mui/material';
 
-export default function Form({setLogged}){
+export default function Form({setLogged,setUserName,setUserEmail}){
     const [loading, setLoading] = useState(false);
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
@@ -26,7 +26,10 @@ export default function Form({setLogged}){
                 setLoading(false)
                 setLogged(true);
                 navigate("/")
-                console.log("logged in successfully")
+                setUserName(json.name);
+                setUserEmail(json.email);
+                console.log("logged in successfully");
+
             }
         }catch(err){
             console.log(err.response.data.error);

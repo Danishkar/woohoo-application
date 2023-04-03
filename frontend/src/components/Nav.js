@@ -5,7 +5,7 @@ import { Link as ScrollLink } from 'react-scroll';
 // import data
 import { navigation } from '../data';
 
-const Nav = () => {
+const Nav = ({logged,setLogged}) => {
   return (
     <nav className='text-[15px]'>
       <ul className='flex gap-x-10'>
@@ -23,9 +23,17 @@ const Nav = () => {
               </Link>
             )
           }
-
-          
         })}
+        {
+          logged ?
+            <Link to="/login" onClick={()=>{setLogged(false)}} className='capitalize hover:text-orange transition'>
+              Log Out
+            </Link>
+          :
+          <Link to="/login" className='capitalize hover:text-orange transition'>
+            Log In
+          </Link>
+        }
       </ul>
     </nav>
   );

@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 // pages & components
 import Home from './pages/Home';
 import "./App.css"
@@ -9,8 +9,13 @@ import Upload from './pages/Upload'
 import Aboutus from './pages/Aboutus';
 // import Profile from './pages/Profile';
 function App() {
+  const navigate = useNavigate()
   const [logged,setLogged] = useState(false);
   const [loading, setLoading] = useState(true);
+
+  // state variables for the user
+  const [userName, setUserName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
   const spinner = document.getElementById("spinner");
   if (spinner) {
     setTimeout(() => {
@@ -19,30 +24,25 @@ function App() {
     }, 2000);
   }
   console.log(logged);
+  console.log("user details "+userName+" , "+ userEmail);
   return (
     !loading && (
     <Routes>
-      <Route path='/' element={<Home/>} />
+      <Route path='/' element={<Home logged={logged} setLogged={setLogged}/>} />
       {/* { !logged ? <Route path='/profile' element={<Profile />} /> : null } */}
       <Route
         path='/login'
-        element={<Login1 setLogged={setLogged}/>}
+        element={<Login1 setLogged={setLogged} setUserName={setUserName} setUserEmail={setUserEmail}/>}
       />
       <Route
         path='/signup'
-        element={<Signup1 setLogged={setLogged} />}
+        element={<Signup1 setLogged={setLogged} setUserName={setUserName} setUserEmail={setUserEmail}/>}
       />
-      <Route
-        path='/upload'
-        element={<Upload />}
-      />
+      {logged ? <Route path='/upload' element={<Upload />} /> : null}
+      
       <Route
       path='/about'
       element={<Aboutus/>}/>
-      <Route
-        path='/upload'
-        element={<Upload />}
-      />
     </Routes>
     )
   );

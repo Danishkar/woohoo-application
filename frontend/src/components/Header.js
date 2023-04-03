@@ -9,7 +9,7 @@ import { CgMenuRight } from 'react-icons/cg';
 import Nav from './Nav';
 import NavMobile from './NavMobile';
 
-const Header = () => {
+const Header = ({logged,setLogged}) => {
   const [bg, setBg] = useState(false);
   const [navMobile, setNavMobile] = useState(false);
 
@@ -33,7 +33,7 @@ const Header = () => {
         </a>
         {/* nav */}
         <div className='hidden lg:flex'>
-          <Nav />
+          <Nav logged={logged} setLogged={setLogged}/>
         </div>
         {/* program */}
         {/* <Program /> */}
@@ -50,7 +50,7 @@ const Header = () => {
             navMobile ? 'max-h-[260px]' : 'max-h-0'
           } fixed w-full bg-yellow shadow-lg top-[70px] left-0 h-full overflow-hidden transition-all`}
         >
-          <NavMobile />
+          <NavMobile logged={logged} setLogged={setLogged} />
         </div>
       </div>
     </header>

@@ -43,9 +43,8 @@ const About = () => {
                                     Accommodation
                                 </h4>
                                 <p className="mb-2 leading-normal text-blue-secondary">
-                                    react tailwind css card with image It is a long established
-                                    fact that a reader will be distracted by the readable
-                                    content.
+                                    Join with Woohoo to provide a safe home to stray pets simply but 
+                                    filling out the form
                                 </p>
                                 <Link to={'/accommodation'}>
                                     <button className="px-4 py-2 text-sm bg-orange text-white rounded shadow">

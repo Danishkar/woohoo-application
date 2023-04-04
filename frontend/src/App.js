@@ -1,6 +1,7 @@
 import { Routes, Route, useNavigate } from 'react-router-dom';
 // pages & components
 import Home from './pages/Home';
+import Accommodation from './pages/Accommodation';
 import "./App.css"
 import { useState } from 'react';
 import Signup1 from './pages/Signup1';
@@ -43,6 +44,8 @@ function App() {
       <Route
       path='/about'
       element={<Aboutus/>}/>
+
+      <Route path="/accommodation" element={<Accommodation logged={logged} setLogged={setLogged} userEmail={userEmail}/>} />
     </Routes>
     )
   );

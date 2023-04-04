@@ -3,7 +3,7 @@ import HeroSlideImage1 from './assets/img/dogs/dog-slide-1.png';
 import HeroSlideImage2 from './assets/img/dogs/dog-slide-2.png';
 import HeroSlideImage3 from './assets/img/dogs/dog-slide-3.png';
 import Earmits from './assets/Diseases/Earmits.png';
-import mange from './assets/Diseases/mange.jpg';
+import Mange from './assets/Diseases/mange.jpg';
 import RingworminCats from './assets/Diseases/RingworminCats.jpg';
 import RingworminDogs from './assets/Diseases/RingworminDogs.webp';
 
@@ -24,7 +24,7 @@ export const navigation = [
   {
     name: 'Accommodation',
     inpage: false,
-    href: '#',
+    href: '/accommodation',
   },
   {
     name: 'Contact Us',
@@ -100,7 +100,7 @@ export const disease = [
     disease:'Mange',
     description:'Depending on which type of mite is involved, dog mange may result in signs such as itchiness and hair loss in its early stage. Early-stage mange in dogs can be difficult to differentiate from other skin conditions. You should consult with your vet if you notice any signs of skin disease such as scratching, hair loss or scabs on the skin.',
     medicine:'NexGard® and NexGard SPECTRA® provide effective demodectic mange treatment, sarcoptic mange treatment and ear mite treatment for dogs. Two consecutive monthly treatments of NexGard or NexGard SPECTRA are recommended for sarcoptic mange',
-    img:<mange/>,
+    img:<Mange/>,
   },
 
   {

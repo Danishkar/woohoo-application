@@ -10,6 +10,7 @@ const imageModel = require("./models/imageModel")
 
 const userRoutes = require("./routes/user")
 const uploadRoutes = require("./routes/upload")
+const organizationRoutes = require("./routes/organization")
 // express app
 const app = express();
 
@@ -24,6 +25,7 @@ app.use((req,res,next)=>{
 // routes
 app.use("/api/user",userRoutes)
 app.use("/api", uploadRoutes)
+app.use("/api", organizationRoutes)	
 
 
 // connect to mongoose

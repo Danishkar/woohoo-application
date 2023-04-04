@@ -42,10 +42,10 @@ export const navigation = [
 export const heroSlider = [
   {
     id: 1,
-    title: 'We take care of your pet.',
+    title: 'Find a home for your furry friend.',
     image: <HeroSlideImage1 />,
     subtitle:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio in et, lectus sit lorem id integer.',
+      'Head over to our accommodation page to reserve a spot at our recommended shelters for your pet.',
     buttonText: 'Get an appointment',
   },
   {

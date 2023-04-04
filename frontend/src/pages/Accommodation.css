@@ -1,0 +1,95 @@
+.accom-input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+.accom-label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #f16b6f;
+  }
+  
+  .accom-input,
+  .accom-select {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f8f6ed;
+  }
+  
+  /* Style the select fields for the form */
+  .accom-select {
+    color: #444;
+  }
+  
+  .accom-select option[disabled] {
+    color: #ccc;
+  }
+
+  /* Style the button for submitting the form */
+.book-btn {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: #f16b6f;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Change button color on hover */
+  .book-btn:hover {
+    background-color: #e74c3c;
+  }
+
+  /* Style the individual shelter cards */
+.shelter-card {
+  width: 350px;
+  margin: 5px;
+  margin-bottom: 25px;
+  padding: 10px;
+  background-color: #f8f6ed;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Change card shadow on hover */
+.shelter-card:hover {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Highlight selected card */
+  .shelter-card.selected {
+    border: 3px solid #f16b6f;
+  }
+  
+  /* Style the images within the shelter cards */
+  .shelter-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  /* Style the headings within the shelter cards */
+  .shelter-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #f16b6f
+  }
+  

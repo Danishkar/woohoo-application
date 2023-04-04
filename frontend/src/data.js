@@ -46,23 +46,20 @@ export const heroSlider = [
     image: <HeroSlideImage1 />,
     subtitle:
       'Head over to our accommodation page to reserve a spot at our recommended shelters for your pet.',
-    buttonText: 'Get an appointment',
   },
   {
     id: 2,
-    title: 'Lorem ipsum dolor sit.',
+    title: 'Early detection is the best form of skin disease prevention',
     image: <HeroSlideImage2 />,
     subtitle:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio in et, lectus sit lorem id integer.',
-    buttonText: 'Get an appointment',
+      'With WooHoo you can detect the skin diseases on your pet without any hassle. A healthy pet makes a happy owner!',
   },
   {
     id: 3,
-    title: 'Nunc odio in et, lectus sit.',
+    title: 'The greatness of a nation can be judged by the way its animals are treated',
     image: <HeroSlideImage3 />,
     subtitle:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio in et, lectus sit lorem id integer.',
-    buttonText: 'Get an appointment',
+      'Help us find a home for over 3 million stray animals in Sri Lanka.',
   },
 ];
 

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import api from "../api/woohoo_axios";
+import{message as messages} from 'antd';
 
 const Modals = ({showModal,setShowModal,userEmail,setCount}) => {
     const [organizationName,setOrganizationName] = useState('');
@@ -11,19 +12,19 @@ const Modals = ({showModal,setShowModal,userEmail,setCount}) => {
         const noOfDogs = parseInt(noOfSlotsDogs)
         const noOfCats = parseInt(noOfSlotsCats)
         if(organizationName === ''){
-          throw new Error("Enter organization name")
+          messages.error({"content":"Enter organization name", "style":{marginTop: '10vh'}})
         }
         else if(noOfSlotsDogs === ''){
-          throw new Error("Enter no. of slots for dogs")
+          messages.error({"content":"Enter no. of slots for dogs", "style":{marginTop: '10vh'}})
         }
         else if (noOfSlotsCats === ''){
-          throw new Error("Enter no. of slots for cats")
+          messages.error({"content":"Enter no. of slots for cats", "style":{marginTop: '10vh'}})
         }
         else if (isNaN(noOfDogs)) {
-          throw new Error("Enter an integer value for no. of slots for dogs");
+          messages.error({"content":"Enter an integer value for no. of slots for dogs", "style":{marginTop: '10vh'}})
         }
         else if (isNaN(noOfCats)) {
-          throw new Error("Enter an integer value for no. of slots for cats");
+          messages.error({"content":"Enter an integer value for no. of slots for cats", "style":{marginTop: '10vh'}})
         }else{
           const body  = JSON.stringify({organizationName,noOfSlotsDogs:noOfDogs,noOfSlotsCats:noOfCats,userEmail})
           const headers = {
@@ -35,6 +36,7 @@ const Modals = ({showModal,setShowModal,userEmail,setCount}) => {
             if(response.statusText === 'OK'){
               console.log(json)
               setCount(prevCount => prevCount + 1)
+              messages.success({"content":"Organization added successfully", "style":{marginTop: '10vh'}})
               setShowModal(false)
             }
           }catch(err){

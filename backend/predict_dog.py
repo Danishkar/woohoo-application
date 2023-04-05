@@ -14,7 +14,7 @@ img = np.reshape(img, [1, 130, 130, 3])
 
 def prediction_process(prediction):
     if prediction[0][0] > prediction[0][1]:
-        print("Manges")
+        print("Mange")
     else:
         print("Ringworm")
 prediction = model.predict(img)

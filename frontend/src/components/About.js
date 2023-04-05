@@ -15,7 +15,7 @@ const About = () => {
                         <div className="w-full bg-white rounded-lg shadow-xl lg:max-w-sm">
                             <img
                                 className="object-cover w-full h-48 rounded-lg"
-                                src="https://cdn.pixabay.com/photo/2022/08/18/09/20/houses-7394390__340.jpg"
+                                src="https://cdn.pixabay.com/photo/2017/08/07/18/57/dog-2606759_960_720.jpg"
                                 alt="ima"
                             />
                             <div className="p-4">
@@ -35,7 +35,7 @@ const About = () => {
                         <div className="w-full bg-white rounded-lg shadow-xl lg:max-w-sm">
                             <img
                                 className="object-cover w-full h-48 rounded-lg"
-                                src="https://cdn.pixabay.com/photo/2022/08/18/09/20/houses-7394390__340.jpg"
+                                src="https://cdn.pixabay.com/photo/2018/04/19/19/38/animal-3334067_960_720.jpg"
                                 alt="ima"
                             />
                             <div className="p-4">
@@ -57,7 +57,7 @@ const About = () => {
                         <div className="w-full bg-white rounded-lg shadow-xl lg:max-w-sm">
                             <img
                                 className="object-cover w-full h-48 rounded-lg"
-                                src="https://cdn.pixabay.com/photo/2022/08/18/09/20/houses-7394390__340.jpg"
+                                src="https://cdn.pixabay.com/photo/2017/05/30/02/02/adoption-2355520_960_720.jpg"
                                 alt="ima"
                             />
                             <div className="p-4">

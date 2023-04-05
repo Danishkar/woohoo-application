@@ -35,7 +35,7 @@ const Upload = () =>{
         setSelectedImage(image);
 
         // FOR BUG IN CHROME
-        event.target.value = "";
+        event.target.value = " ";
     };
 
     function deleteHandler() {
@@ -102,7 +102,7 @@ const Upload = () =>{
                     type="file"
                     name="image"
                     onChange={onSelectFile}
-                    accept=".png , .jpeg, .jpg"
+                    accept=".png, .jpeg, .jpg"
                 />
             </label>}
             {!hid && <br />}

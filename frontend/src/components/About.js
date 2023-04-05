@@ -67,7 +67,7 @@ const About = () => {
                                     Coming Soon ...
                                 </p>
                                 <button className="px-4 py-2 text-sm bg-orange text-white rounded shadow cursor-not-allowed">
-                                    Read more
+                                    Go
                                 </button>
                             </div>
                         </div>

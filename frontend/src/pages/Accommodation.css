@@ -53,6 +53,23 @@
     background-color: #e74c3c;
   }
 
+  .edit-btn {
+    padding: 10px 15px 10px 15px; 
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: #f16b6f;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Change button color on hover */
+  .edit-btn:hover {
+    background-color: #e74c3c;
+  }
+
   /* Style the individual shelter cards */
 .shelter-card {
   width: 350px;
@@ -90,6 +107,6 @@
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 5px;
-    color: #f16b6f
+    color: #FF4917
   }
   

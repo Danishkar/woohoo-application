@@ -4,17 +4,37 @@ import Header from "../components/Header";
 import "./Accommodation.css"
 import api from "../api/woohoo_axios";
 import Modals from "../components/Modals.js"
+import EditModals from "../components/EditModals.js"
 import{message as messages} from 'antd';
+import DeleteModals from "../components/DeleteModals";
 
 const Accommodation = ({logged,setLogged,userEmail}) => {
     const [showModal, setShowModal] = useState(false);
     const [count, setCount] = useState(0);
+
+    const [editModal,setEditModal] = useState(false);
+    const [editOrganization,setEditOrganization] = useState(null);
+
+    const [deleteModal,setDeleteModal] = useState(false);
+    const [deleteOrganization,setDeleteOrganization] = useState(null);
 
     const [name, setName] = useState('');
     const [contactNumber, setContactNumber] = useState('');
     const [selectedShelter, setSelectedShelter] = useState(null);
     const [selectedAnimal, setSelectedAnimal] = useState('Dog');
     const [organizationDetails, setOrganizationDetails] = useState([]);
+
+    const handleEditButton = (organization) =>{
+        setEditModal(true)
+        setEditOrganization(organization)
+        console.log(editOrganization)
+    }
+
+    const handleDeleteButton = (organization) =>{
+        setDeleteModal(true)
+        setDeleteOrganization(organization)
+        console.log(deleteOrganization)
+    }
 
     const FetctData = async () => {
         useEffect(() => {
@@ -32,10 +52,10 @@ const Accommodation = ({logged,setLogged,userEmail}) => {
     FetctData()
     const handleFormSubmit = async(event) => {
         event.preventDefault();
-        if(name == ""){
-            messages.error({"content":"Enter your name", "style":{marginTop: '10vh'}})
+        if(name === ""){
+            messages.error({"content":"Enter your name", "style":{marginTop: '1vh'}})
         }
-        else if(contactNumber == ""){
+        else if(contactNumber === ""){
             messages.error({"content":"Enter your contact number", "style":{marginTop: '10vh'}})
         }
         else if(selectedShelter == null){
@@ -152,10 +172,10 @@ const Accommodation = ({logged,setLogged,userEmail}) => {
     return ( 
         <div className='w-full max-w-[1440px] mx-auto bg-orange-quaternary relative'>
             <Header logged={logged} setLogged={setLogged} />
-            <div className="pt-16 pb-96">
-                <h1 className="md:text-center ml-6 md:ml-0 text-[20px] md:text-[25px] pb-4">Find a shelter for your furry friend!</h1>
+            <div className="pt-16 pb-32">
+                <h1 className="text-orange font-bold md:text-center ml-6 md:ml-0 text-[20px] md:text-[25px] pb-4">Find a shelter for your furry friend!</h1>
                 <form onSubmit={handleFormSubmit}>
-                    <div className="ml-auto mr-auto grid grid-cols-2 md:grid-cols-3">
+                    <div className="ml-auto mr-auto grid grid-cols-1 md:grid-cols-3">
                         <label className="accom-label ml-6 md:ml-[20%]">
                         Name:
                         <input
@@ -209,15 +229,39 @@ const Accommodation = ({logged,setLogged,userEmail}) => {
                             <p>
                                 {`Available Slots Cats: ${organization.noOfSlotsCats}`}
                             </p>
+                            {organization.userEmail === userEmail &&
+                                <div className="flex gap-4">
+                                    <button
+                                        type="button"
+                                        onClick={() => handleEditButton(organization)} 
+                                        className="edit-btn"
+                                    >
+                                        Edit
+                                    </button>
+                                    <button
+                                        type="button"
+                                        onClick={() => handleDeleteButton(organization)} 
+                                        className="edit-btn"
+                                    >
+                                        Delete
+                                    </button>
+                                </div>
+                                
+                            }
                             </div>
                         ))}
                     </div>
                     <button type="submit" className="book-btn ml-6 md:ml-[7%] ">Book Slot</button>
                     
                 </form>
-                <button type="button" onClick={() => setShowModal(true)} className="book-btn ml-6 md:ml-[7%]">Add Organization</button>
+                <h1 className="text-orange font-bold md:text-center mt-12 ml-6 md:ml-0 text-[20px] md:text-[25px] pb-4">Add your organization</h1>
+                <div className="flex flex-col items-center">
+                    <button type="button" onClick={() => setShowModal(true)} className="book-btn">Add Organization</button>
+                </div>
             </div>
             <Modals showModal={showModal} setShowModal={setShowModal} userEmail={userEmail} setCount={setCount}/>
+            {editOrganization && <EditModals editModal={editModal} setEditModal={setEditModal} editOrganization={editOrganization} setCount={setCount} />}
+            {deleteOrganization && <DeleteModals deleteModal={deleteModal} setDeleteModal={setDeleteModal} deleteOrganization={deleteOrganization} setCount={setCount} />}
             <Footer />
         </div>
 

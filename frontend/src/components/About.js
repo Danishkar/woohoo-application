@@ -43,8 +43,7 @@ const About = () => {
                                     Accommodation
                                 </h4>
                                 <p className="mb-2 leading-normal text-blue-secondary">
-                                    Join with Woohoo to provide a safe home to stray pets simply but 
-                                    filling out the form
+                                    Join with Woohoo to provide a safe home to stray pets just in one click.
                                 </p>
                                 <Link to={'/accommodation'}>
                                     <button className="px-4 py-2 text-sm bg-orange text-white rounded shadow">

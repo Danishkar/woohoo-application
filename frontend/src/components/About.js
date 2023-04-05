@@ -16,7 +16,7 @@ const About = () => {
                         <div className="w-full bg-white rounded-lg shadow-xl lg:max-w-sm">
                             <img
                                 className="object-cover w-full h-48 rounded-lg"
-                                src="frontend\src\assets\img\dogs\Diseases1.jpg"
+                                src="./assets/img/dogs/Diseases1.jpg"
                                 alt="ima"
                             />
                             <div className="p-4">

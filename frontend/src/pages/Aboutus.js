@@ -8,10 +8,10 @@ import Sujana from "../assets/img/Aboutus/Sujana.jpg"
 import Danishkar from "../assets/img/Aboutus/Danishkar.jpeg"
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-function Aboutus() {
+function Aboutus({logged,setLogged}) {
     return (
     <div className="divv w-full max-w-[1440px] mx-auto bg-orange-quaternary relative">
-        <Header />
+        <Header logged={logged} setLogged={setLogged}/>
         <div className="about-section">
             <h1 className="h11" style={{paddingTop: '0px', textAlign: 'center'}}>About Us</h1>
             <p className="pp" style={{fontSize: '20px', color:'black'}}>WooHoo is a website dedicated to 

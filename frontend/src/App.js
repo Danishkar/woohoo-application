@@ -38,7 +38,7 @@ function App() {
       />
       <Route path='/upload' element={logged ? <Upload /> : <Navigate to="/login" />} />
       
-      <Route path='/about' element={<Aboutus/>}/>
+      <Route path='/about' element={<Aboutus logged={logged} setLogged={setLogged}/>}/>
 
       <Route 
         path="/accommodation" 

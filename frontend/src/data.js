@@ -3,7 +3,7 @@ import HeroSlideImage1 from './assets/img/dogs/dog-slide-1.png';
 import HeroSlideImage2 from './assets/img/dogs/dog-slide-2.png';
 import HeroSlideImage3 from './assets/img/dogs/dog-slide-3.png';
 import Earmits from './assets/Diseases/Earmits.png';
-import mange from './assets/Diseases/mange.jpg';
+import Mange from './assets/Diseases/mange.jpg';
 import RingworminCats from './assets/Diseases/RingworminCats.jpg';
 import RingworminDogs from './assets/Diseases/RingworminDogs.webp';
 
@@ -24,7 +24,7 @@ export const navigation = [
   {
     name: 'Accommodation',
     inpage: false,
-    href: '#',
+    href: '/accommodation',
   },
   {
     name: 'Contact Us',
@@ -42,27 +42,24 @@ export const navigation = [
 export const heroSlider = [
   {
     id: 1,
-    title: 'We take care of your pet.',
+    title: 'Find a home for your furry friend.',
     image: <HeroSlideImage1 />,
     subtitle:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio in et, lectus sit lorem id integer.',
-    buttonText: 'Get an appointment',
+      'Head over to our accommodation page to reserve a spot at our recommended shelters for your pet.',
   },
   {
     id: 2,
-    title: 'Lorem ipsum dolor sit.',
+    title: 'Early detection is the best form of skin disease prevention',
     image: <HeroSlideImage2 />,
     subtitle:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio in et, lectus sit lorem id integer.',
-    buttonText: 'Get an appointment',
+      'With WooHoo you can detect the skin diseases on your pet without any hassle. A healthy pet makes a happy owner!',
   },
   {
     id: 3,
-    title: 'Nunc odio in et, lectus sit.',
+    title: 'The greatness of a nation can be judged by the way its animals are treated',
     image: <HeroSlideImage3 />,
     subtitle:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio in et, lectus sit lorem id integer.',
-    buttonText: 'Get an appointment',
+      'Help us find a home for over 3 million stray animals in Sri Lanka.',
   },
 ];
 
@@ -103,7 +100,7 @@ export const disease = [
     disease:'Mange',
     description:'Depending on which type of mite is involved, dog mange may result in signs such as itchiness and hair loss in its early stage. Early-stage mange in dogs can be difficult to differentiate from other skin conditions. You should consult with your vet if you notice any signs of skin disease such as scratching, hair loss or scabs on the skin.',
     medicine:'NexGard® and NexGard SPECTRA® provide effective demodectic mange treatment, sarcoptic mange treatment and ear mite treatment for dogs. Two consecutive monthly treatments of NexGard or NexGard SPECTRA are recommended for sarcoptic mange',
-    img:<mange/>,
+    img:<Mange/>,
   },
 
   {

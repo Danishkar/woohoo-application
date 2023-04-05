@@ -1,19 +1,19 @@
 .h11 {
-  font-size: 100px ;
-  /* font-style: italic;
-  font-family: 'Times New Roman', Times, serif; */
+  font-size: 50px ;
+  font-style: italic;
+  font-family: 'poppins', Times, serif;
 
 }
 
 .h22 {
   color: black;
-  /* font-family: 'Times New Roman', Times, serif; */
+  font-family: 'poppins', Times, serif; 
   font-size: 20px;
 }
 
 .pp{
   color:black;
-  /* font-family: 'Times New Roman', Times, serif; */
+   font-family: 'poppins', Times, serif;
   font-size: 20px;
 }
 
@@ -35,8 +35,10 @@ html {
 }
 
 .cardd {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 8px;
+  box-shadow: 0 4px 8px 0 rgba(73, 33, 33, 0.2);
+  margin: 10px;
+  
+
 }
 
 .about-section {
@@ -58,7 +60,7 @@ html {
 .titlee {
   color: black;
   font-size: 20px;
-  /* font-family: 'Times New Roman', Times, serif; */
+  font-family: 'poppins', Times, serif; 
 }
 
 .buttonn {
@@ -70,7 +72,7 @@ html {
   background-color:#FF4917 ;
   text-align: center;
   cursor: pointer;
-  width: 104%;
+  width: 100%;
 }
 
 .buttonn:hover {

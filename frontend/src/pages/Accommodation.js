@@ -4,6 +4,8 @@ import Header from "../components/Header";
 import "./Accommodation.css"
 import api from "../api/woohoo_axios";
 import Modals from "../components/Modals.js"
+import{message as messages} from 'antd';
+
 const Accommodation = ({logged,setLogged,userEmail}) => {
     const [showModal, setShowModal] = useState(false);
     const [count, setCount] = useState(0);
@@ -30,7 +32,16 @@ const Accommodation = ({logged,setLogged,userEmail}) => {
     FetctData()
     const handleFormSubmit = async(event) => {
         event.preventDefault();
-        if(selectedShelter){
+        if(name == ""){
+            messages.error({"content":"Enter your name", "style":{marginTop: '10vh'}})
+        }
+        else if(contactNumber == ""){
+            messages.error({"content":"Enter your contact number", "style":{marginTop: '10vh'}})
+        }
+        else if(selectedShelter == null){
+            messages.error({"content":"Select an organization", "style":{marginTop: '10vh'}})
+        }
+        else if(selectedShelter){
             var data = {
                 service_id: 'service_ptoopvd',
                 template_id: 'template_fxeoblj',
@@ -64,12 +75,16 @@ const Accommodation = ({logged,setLogged,userEmail}) => {
                             })
                                 .then(function (response) {
                                     console.log(response);
-                                    alert('Your mail is sent!');
+                                    messages.success({"content":"Your mail is sent!", "style":{marginTop: '10vh'}})
                                 })
                                 .catch(function (error) {
                                     console.log(error);
-                                    alert('Oops... ' + JSON.stringify(error));
+                                    messages.error({"content":"Oops... " + JSON.stringify(error), "style":{marginTop: '10vh'}})
                                 });
+                            setName("");
+                            setContactNumber("");
+                            setSelectedAnimal("Dog");
+                            setSelectedShelter(null);
                             console.log(json)
                             setCount(prevCount => prevCount + 1)
                         }
@@ -78,7 +93,7 @@ const Accommodation = ({logged,setLogged,userEmail}) => {
                     }
                     
                 }else{
-                    alert("No slots available for dogs")
+                    messages.error({"content":"No slots available for dogs", "style":{marginTop: '10vh'}})
                 }
             }else{
                 if(selectedShelter.noOfSlotsCats > 0){
@@ -101,12 +116,16 @@ const Accommodation = ({logged,setLogged,userEmail}) => {
                             })
                                 .then(function (response) {
                                     console.log(response);
-                                    alert('Your mail is sent!');
+                                    messages.success({"content":"Your mail is sent!", "style":{marginTop: '10vh'}})
                                 })
                                 .catch(function (error) {
                                     console.log(error);
-                                    alert('Oops... ' + JSON.stringify(error));
+                                    messages.error({"content":"Oops... " + JSON.stringify(error), "style":{marginTop: '10vh'}})
                                 });
+                            setName("");
+                            setContactNumber("");
+                            setSelectedAnimal("Dog");
+                            setSelectedShelter(null);
                             console.log(json)
                             setCount(prevCount => prevCount + 1)
                         }
@@ -115,11 +134,9 @@ const Accommodation = ({logged,setLogged,userEmail}) => {
                     }
                     
                 }else{
-                    alert("No slots available for cats")
+                    messages.error({"content":"No slots available for cats", "style":{marginTop: '10vh'}})
                 }
             }
-        }else{
-            alert('Please select a shelter before booking'); 
         }
     };
 
@@ -145,7 +162,6 @@ const Accommodation = ({logged,setLogged,userEmail}) => {
                             type="text"
                             value={name}
                             onChange={(event) => setName(event.target.value)}
-                            required
                             className="accom-input"
                         />
                         </label>
@@ -155,7 +171,6 @@ const Accommodation = ({logged,setLogged,userEmail}) => {
                             type="text"
                             value={contactNumber}
                             onChange={(event) => setContactNumber(event.target.value)}
-                            required
                             className="accom-input"
                         />
                         </label>
@@ -185,6 +200,9 @@ const Accommodation = ({logged,setLogged,userEmail}) => {
                                 alt={`${organization.organizationName} shelter`}
                             />
                             <h3>{organization.organizationName}</h3>
+                            <p className="font-bold">
+                                {`Email: ${organization.userEmail}`}
+                            </p>
                             <p>
                                 {`Available Slots Dogs: ${organization.noOfSlotsDogs}`}
                             </p>

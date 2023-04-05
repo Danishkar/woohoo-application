@@ -9,7 +9,7 @@ import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
 import Disease from "../components/Disease";
 
-const Upload = () =>{
+const Upload = ({logged, setLogged}) =>{
     const [hid,setHide] = useState(false);
     const [open, setOpen] = useState(false);
     const handleClose = () => {
@@ -66,7 +66,7 @@ const Upload = () =>{
 
     return (
         <>
-        <Header />
+        <Header logged={logged} setLogged={setLogged}/>
         <section className="upload relative min-h-[748px] pt-24 pb-12 lg:pt-32 overflow-hidden items-center">
             {!hid &&<h1 className="flex justify-center mb-4 text-[20px] font-bold">Select the type of animal.</h1>}
             {!hid && <div className="flex items-center mb-4 justify-center">

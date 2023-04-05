@@ -36,7 +36,7 @@ function App() {
         path='/signup'
         element={<Signup1 setLogged={setLogged} setUserName={setUserName} setUserEmail={setUserEmail}/>}
       />
-      <Route path='/upload' element={logged ? <Upload /> : <Navigate to="/login" />} />
+      <Route path='/upload' element={logged ? <Upload logged={logged} setLogged={setLogged} /> : <Navigate to="/login" />} />
       
       <Route path='/about' element={<Aboutus logged={logged} setLogged={setLogged}/>}/>
 

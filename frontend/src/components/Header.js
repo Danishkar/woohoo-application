@@ -5,7 +5,6 @@ import React, { useEffect, useState } from 'react';
 import { CgMenuRight } from 'react-icons/cg';
 
 // import components
-// import Program from './Program';
 import Nav from './Nav';
 import NavMobile from './NavMobile';
 import { Link } from 'react-router-dom';

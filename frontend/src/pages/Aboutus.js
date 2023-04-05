@@ -26,7 +26,7 @@ function Aboutus() {
 
            Our team is dedicated to staying up-to-date with the latest research and 
            techniques in animal healthcare, so that we can provide the most effective and 
-           efficient treatment options for our patients. We also believe in working closely 
+           modern treatment options for our patients. We also believe in working closely 
            with pet owners to develop individualized treatment plans that meet the unique needs 
            of each pet and their owner.<br></br>
 

@@ -93,7 +93,7 @@ const Upload = ({logged, setLogged}) =>{
                 />
                 <label htmlFor="dog" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Dog</label>
             </div>}
-            {!hid && <h1 className="flex justify-center mb-4 text-[20px] font-bold">Add the picture of the infeacted area.</h1>}
+            {!hid && <h1 className="flex justify-center mb-4 text-[20px] font-bold">Add the picture of the infected area.</h1>}
             {!hid && <label className="upload-label">
                 + Add Image
                 <br />

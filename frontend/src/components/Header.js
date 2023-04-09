@@ -5,9 +5,9 @@ import React, { useEffect, useState } from 'react';
 import { CgMenuRight } from 'react-icons/cg';
 
 // import components
-// import Program from './Program';
 import Nav from './Nav';
 import NavMobile from './NavMobile';
+import { Link } from 'react-router-dom';
 
 const Header = ({logged,setLogged}) => {
   const [bg, setBg] = useState(false);
@@ -27,10 +27,10 @@ const Header = ({logged,setLogged}) => {
     >
       <div className='container mx-auto flex justify-between items-center'>
         {/* logo */}
-        <a href='#'>
+        <Link to={'/'}>
           {/* <img src={Logo} alt='' /> */}
           <h1 className='text-xl font-bold text-blue'>Woohoo</h1>
-        </a>
+        </Link>
         {/* nav */}
         <div className='hidden lg:flex'>
           <Nav logged={logged} setLogged={setLogged}/>

@@ -9,7 +9,7 @@ import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
 import Disease from "../components/Disease";
 
-const Upload = () =>{
+const Upload = ({logged, setLogged}) =>{
     const [hid,setHide] = useState(false);
     const [open, setOpen] = useState(false);
     const handleClose = () => {
@@ -35,7 +35,7 @@ const Upload = () =>{
         setSelectedImage(image);
 
         // FOR BUG IN CHROME
-        event.target.value = "";
+        event.target.value = " ";
     };
 
     function deleteHandler() {
@@ -66,7 +66,7 @@ const Upload = () =>{
 
     return (
         <>
-        <Header />
+        <Header logged={logged} setLogged={setLogged}/>
         <section className="upload relative min-h-[748px] pt-24 pb-12 lg:pt-32 overflow-hidden items-center">
             {!hid &&<h1 className="flex justify-center mb-4 text-[20px] font-bold">Select the type of animal.</h1>}
             {!hid && <div className="flex items-center mb-4 justify-center">
@@ -93,7 +93,7 @@ const Upload = () =>{
                 />
                 <label htmlFor="dog" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Dog</label>
             </div>}
-            {!hid && <h1 className="flex justify-center mb-4 text-[20px] font-bold">Add the picture of the infeacted area.</h1>}
+            {!hid && <h1 className="flex justify-center mb-4 text-[20px] font-bold">Add the picture of the infected area.</h1>}
             {!hid && <label className="upload-label">
                 + Add Image
                 <br />
@@ -102,7 +102,7 @@ const Upload = () =>{
                     type="file"
                     name="image"
                     onChange={onSelectFile}
-                    accept=".png , .jpeg, .jpg"
+                    accept=".png, .jpeg, .jpg"
                 />
             </label>}
             {!hid && <br />}

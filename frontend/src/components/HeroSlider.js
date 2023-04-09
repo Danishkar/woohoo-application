@@ -42,9 +42,6 @@ const HeroSlider = () => {
                     <p className='text-base lg:text-[18px] lg:leading-8 max-w-[540px] mb-8'>
                       {subtitle}
                     </p>
-                    <button className='btn bg-orange text-white mb-8 lg:mb-0'>
-                      {buttonText}
-                    </button>
                   </div>
                   <div className='flex-1 flex justify-center'>
                     <img className='h-96 lg:h-auto' src={image.type} alt='' />

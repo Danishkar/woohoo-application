@@ -8,10 +8,10 @@ import Sujana from "../assets/img/Aboutus/Sujana.jpg"
 import Danishkar from "../assets/img/Aboutus/Danishkar.jpeg"
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-function Aboutus() {
+function Aboutus({logged,setLogged}) {
     return (
     <div className="divv w-full max-w-[1440px] mx-auto bg-orange-quaternary relative">
-        <Header />
+        <Header logged={logged} setLogged={setLogged}/>
         <div className="about-section">
             <h1 className="h11" style={{paddingTop: '0px', textAlign: 'center'}}>About Us</h1>
             <p className="pp" style={{fontSize: '20px', color:'black'}}>WooHoo is a website dedicated to 
@@ -26,7 +26,7 @@ function Aboutus() {
 
            Our team is dedicated to staying up-to-date with the latest research and 
            techniques in animal healthcare, so that we can provide the most effective and 
-           efficient treatment options for our patients. We also believe in working closely 
+           modern treatment options for our patients. We also believe in working closely 
            with pet owners to develop individualized treatment plans that meet the unique needs 
            of each pet and their owner.<br></br>
 
@@ -41,7 +41,7 @@ function Aboutus() {
         <div className="row">
             <div className="columnn">
                 <div className="cardd text-center">
-                    <img src={Sujana} alt="Sujana" style={{ width: "38%" , marginLeft:"auto", marginRight:'auto' }} />
+                    <img src={Sujana} alt="Sujana" style={{ width: "33%" , marginLeft:"auto", marginRight:'auto' }} />
                     <div className="containers">
                         <h2 className="h22">Sujana Tharmalingam</h2>
                         <p className="titlee">Group Leader</p>
@@ -55,7 +55,7 @@ function Aboutus() {
 
             <div className="columnn">
                 <div className="cardd">
-                    <img src={Danishkar} alt="Danishkar" style={{ width: "42%", marginLeft:"auto", marginRight:'auto'}} />
+                    <img src={Danishkar} alt="Danishkar" style={{ width: "38%", marginLeft:"auto", marginRight:'auto'}} />
                     <div className="containers">
                         <h2 className="h22">Danishkar Sivalingam</h2>
                         <p className="titlee">Group Member</p>
@@ -69,7 +69,7 @@ function Aboutus() {
 
             <div className="columnn">
                 <div className="cardd">
-                    <img src={bodini} alt="Bodini" style={{ width: "40%", marginLeft:"auto", marginRight:'auto' }} />
+                    <img src={bodini} alt="Bodini" style={{ width: "37%", marginLeft:"auto", marginRight:'auto' }} />
                     <div className="containers">
                         <h2 className="h22">Bodini Perera</h2>
                         <p className="titlee">Group Member</p>
@@ -83,7 +83,7 @@ function Aboutus() {
 
             <div className="columnn">
                 <div className="cardd">
-                    <img src={Ranudi} alt="Ranudi" style={{ width: "28%", marginLeft:"auto", marginRight:'auto' }} />
+                    <img src={Ranudi} alt="Ranudi" style={{ width: "26%", marginLeft:"auto", marginRight:'auto' }} />
                     <div className="containers">
                         <h2 className="h22">Ranudi Kumarawadu</h2>
                         <p className="titlee">Group Member</p>
@@ -97,7 +97,7 @@ function Aboutus() {
 
             <div className="columnn">
                 <div className="cardd">
-                    <img src={Chandula} alt="Chandula" style={{ width: "40%", marginLeft:"auto", marginRight:'auto' }} />
+                    <img src={Chandula} alt="Chandula" style={{ width: "35%", marginLeft:"auto", marginRight:'auto' }} />
                     <div className="containers">
                         <h2 className="h22">Chandula Nipun</h2>
                         <p className="titlee">Group Member</p>
